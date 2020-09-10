@@ -55,5 +55,5 @@ npm run start
 Параллельно запустить backend:
 ```
 cd ./your_project/api
-npm run start
+nodemon server.js
 ```
