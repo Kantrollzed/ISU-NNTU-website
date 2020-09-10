@@ -1,0 +1,14 @@
+<div class="inf">
+  <p class="t1">ПАРТНЕРЫ КАФЕДРЫ "ИНФОРМАТИКА И СИСТЕМЫ УПРАВЛЕНИЯ"</p>
+  <p class="t2"></p>
+</div>
+
+  <div class="container">
+  <div class="block" *ngFor="let element of data;">
+    <div class="image" [ngStyle]="{'background-image': 'url(' + element.img + ')'}"></div>
+    <br>
+    <p>{{element.description}}</p>
+  </div>
+</div>
+
+<a href="partners" title="Вернуться к началу" class="topbutton"></a>

@@ -1,0 +1,46 @@
+
+.text {
+  width: 1084px;
+  padding: 20px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  background: url("../../../assets/image 39.png")no-repeat center center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.wrapper {
+  padding: 20px;
+  max-width: 100%;
+}
+
+.box {
+  display:block;
+  width:31%;
+  float:left;
+  padding-bottom: 50px;
+  padding-left: 2%;
+  color: #FFFFFF
+}
+
+
+
+.stage {
+  list-style: none;
+  padding: 0px;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
+.info{
+  /* padding-left: 10px;*/
+  padding-left: 22px; color: #FFFFFF
+}
+
+

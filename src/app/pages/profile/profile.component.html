@@ -1,0 +1,95 @@
+<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
+
+
+<div class="profile-container">
+  <br>
+  <div class="profile profile-params">
+    <h1 class="profile-head">Профиль</h1>
+    <p>{{user.userName}}</p>
+    <p>{{user.userEmail}}</p>
+    <p>{{user.category}}</p>
+    <p *ngIf="user.category === 'Студент'">{{user.group_name}}</p>
+  </div>
+
+  <br><br>
+
+  <div *ngIf="userIsAdmin">
+
+    <div class="profile">
+      <p>Вы как администратор имеете возможность редактировать информационные блоки.</p>
+    </div>
+    <br>
+
+    <div class="profile-news">
+      <h2>Новости:</h2>
+      <br>
+      <div class="news-list-contain">
+        <h3>Список новостей:</h3>
+        <div class="news-list">
+          <div *ngFor="let new of news">
+            <div class="profile profile-card">
+              <app-news-card [card]="new"></app-news-card>
+              <br>
+              <mat-expansion-panel class="abitur-container">
+                <mat-expansion-panel-header class="abitur-head">
+                  Редактировать новость
+                </mat-expansion-panel-header>
+
+                <div>
+                  <br>
+                  <form [formGroup]="changeNewsForm">
+                    <label for="data1">Дата события:</label>
+                    <input id="data1" type="text" formControlName="data" class="form-control" placeholder="{{new.data}}"
+                           [ngClass]="{ 'is-invalid': this.changeBtnPressed && this.changeNewsForm.controls.data.errors }" />
+                    <br>
+
+                    <label for="title1">Название события:</label>
+                    <input id="title1" type="text" formControlName="title" class="form-control" placeholder="{{new.title}}"
+                           [ngClass]="{ 'is-invalid': this.changeBtnPressed && this.changeNewsForm.controls.title.errors }" />
+                    <br>
+
+                    <label for="news1">Описание события:</label>
+                    <textarea id="news1" type="text" formControlName="news" class="form-control" placeholder="{{new.news}}"
+                              [ngClass]="{ 'is-invalid': this.changeBtnPressed && this.changeNewsForm.controls.news.errors }"></textarea>
+                    <br>
+
+                    <button class="btn btn-info" (click)="changeBtnPress(new)">Сохранить изменения</button>
+                    <br><br>
+                  </form>
+                </div>
+              </mat-expansion-panel>
+              <br>
+              <button class="btn btn-danger" (click)="deleteNew(new)">Удалить новость</button>
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="profile">
+        <h3>Составить новость:</h3>
+        <form [formGroup]="addNewsForm" (ngSubmit)="addBtnPress()">
+          <label for="data">Дата события:</label>
+          <input id="data" type="text" formControlName="data" class="form-control"
+                 [ngClass]="{ 'is-invalid': this.addBtnPressed && this.addNewsForm.controls.data.errors }" />
+          <br>
+
+          <label for="title">Название события:</label>
+          <input id="title" type="text" formControlName="title" class="form-control"
+                 [ngClass]="{ 'is-invalid': this.addBtnPressed && this.addNewsForm.controls.title.errors }" />
+          <br>
+
+          <label for="news">Описание события:</label>
+          <textarea id="news" type="text" formControlName="news" class="form-control"
+                    [ngClass]="{ 'is-invalid': this.addBtnPressed && this.addNewsForm.controls.news.errors }"></textarea>
+          <br>
+
+          <button class="btn btn-info">Добавить новость</button>
+        </form>
+      </div>
+      <br>
+    </div>
+  </div>
+  <br>
+
+</div>

@@ -1,0 +1,19 @@
+<div class="content">
+  <div id="particles-js">
+
+    <article>
+      <h3 class="">О нас</h3>
+      <p class="h2-it-team">
+        Соединение базовой подготовки и современных технологий программирования</p>
+      <p class="revealator-slideright revealator-once">
+        {{info}}</p>
+      <a class="button-more revealator-zoomin revealator-once revealator-delay5" href=""><div>Узнать больше</div></a>
+      <ol class="slider__indicators">
+        <li *ngFor="let item of data" (click)="slider(item)" [class.active]="item == activeItem"></li>
+
+      </ol>
+    </article>
+
+  </div>
+</div>
+

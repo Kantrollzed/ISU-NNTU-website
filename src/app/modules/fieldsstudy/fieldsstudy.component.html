@@ -1,0 +1,21 @@
+<div class="content">
+  <div id="particles-js">
+
+    <article>
+      <p class="h2-it-team">
+        НАПРАВЛЕНИЯ ПОДГОТОВКИ СПЕЦИАЛИСТОВ</p><br><br>
+      <div id="textts"> <p class="revealator-slideright revealator-once">
+        {{info}}</p></div>
+      <ol class="slider__indicators">
+        <li *ngFor="let item of data" (click)="slider(item)" [class.active]="item == activeItem"></li>
+
+      </ol>
+    </article>
+
+
+  </div>
+</div>
+<div id="inf">
+  <p>ОБ ОБУЧЕНИИ НА КАФЕДРЕ </p>
+  <p>В программу включены курсы, охватывающие темы от разработки операционных систем и компиляторов до баз данных и численного моделирования.</p>
+</div>

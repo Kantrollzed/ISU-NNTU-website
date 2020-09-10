@@ -1,0 +1,276 @@
+a.glo{
+  float: right;
+  margin: 10px 10px 0 0;
+
+  color:#00c6ff;
+  padding: 10px 20px;
+  width:100px;
+  text-decoration:none;
+  text-align: center;
+  display: block;
+  background-image: linear-gradient(to left,transparent,transparent 50%,#00c6ff 50%,#00c6ff);
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  transition: all .25s ease-in;
+  font-size: 18px;
+  border: 1px solid #00C6FF;
+}
+a.glo:hover {
+  background-position: 0 0;
+  color:#fff;
+}
+
+.after-box {
+  clear: left;
+  height: 100px;
+  font-size: 20px;
+}
+
+.text {
+  width: 1084px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  padding: 0;
+  max-width: 100%;
+  background-color: #274da3;
+  background-image: url("src/assets/startup-students/neural.png");
+  background-size: 1300px 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.box {
+  background-color: #507BE7;
+  width: 399px;
+}
+.box:hover {
+  background-color: #274da3;
+}
+
+.stage {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.button-item{
+  padding-bottom: 2em;
+}
+
+/*************************************
+Build the scene and rotate on hover
+**************************************/
+
+.scene {
+  width: 220px;
+  height: 320px;
+  margin: 0 auto 30px auto;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
+  z-index: 100;
+}
+
+.movie {
+  width: 220px;
+  height: 310px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(-130px);
+  -moz-transform: translateZ(-130px);
+  transform: translateZ(-130px);
+  -webkit-transition: -webkit-transform 350ms;
+  -moz-transition: -moz-transform 350ms;
+  transition: transform 350ms;
+}
+
+.movie:hover {
+  -webkit-transform: rotateY(-78deg) translateZ(10px);
+  -moz-transform: rotateY(-78deg) translateZ(10px);
+  transform: rotateY(-78deg) translateZ(10px);
+}
+
+/*************************************
+Transform and style the two planes
+**************************************/
+
+.movie .poster,
+.movie .info {
+  width: 220px;
+  height: 300px;
+  position: absolute;
+  background-color: #fff;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.movie .poster  {
+  -webkit-transform: translateZ(110px);
+  -moz-transform: translateZ(110px);
+  transform: translateZ(110px);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.movie .info {
+  -webkit-transform: rotateY(90deg) translateZ(110px);
+  -moz-transform: rotateY(90deg) translateZ(110px);
+  transform: rotateY(90deg) translateZ(110px);
+  border: 1px solid #B8B5B5;
+  font-size: 0.75em;
+  overflow: hidden;
+}
+
+
+/*************************************
+Shadow beneath the 3D object
+**************************************/
+
+.csstransforms3d .movie::after {
+  content: '';
+  width: 260px;
+  height: 260px;
+  position: absolute;
+  bottom: 0;
+  box-shadow: 0 30px 50px rgba(0,0,0,0.3);
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  -webkit-transform: rotateX(90deg) translateY(100px);
+  -moz-transform: rotateX(90deg) translateY(100px);
+  transform: rotateX(90deg) translateY(100px);
+  -webkit-transition: box-shadow 350ms;
+  -moz-transition: box-shadow 350ms;
+  transition: box-shadow 350ms;
+}
+
+.csstransforms3d .movie:hover::after {
+  box-shadow: 20px -5px 50px rgba(0,0,0,0.3);
+}
+
+/*************************************
+Movie information
+**************************************/
+
+.info header {
+  color: #FFF;
+  padding: 7px 10px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-shadow: 0px 1px 1px rgba(0,0,0,1);
+}
+
+.info header h1 {
+  margin: 0 0 2px;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.info header .rating {
+  border: 1px solid #FFF;
+  padding: 0px 3px;
+}
+
+.info p {
+  padding: 10px 10px 0;
+  margin: 2px 0 0;
+  color: #000;
+  line-height: 1.4em;
+  border-top: 5px solid #507BE7;
+  font-size: 14px;
+}
+.info .btn-continue {
+  border-color: black;
+  color: black;
+  padding: 20px;
+}
+.movie .poster h1 {
+  background: transparent;
+  color: #FFF;
+  text-align: center;
+  font-size: 28px;
+}
+
+/*************************************
+Generate "lighting" using box shadows
+**************************************/
+
+.movie .poster,
+.movie .info,
+.movie .info header {
+  -webkit-transition: box-shadow 350ms;
+  -moz-transition: box-shadow 350ms;
+  transition: box-shadow 350ms;
+}
+
+.csstransforms3d .movie .poster {
+  box-shadow: inset 0px 0px 40px rgba(255,255,255,0);
+}
+
+.csstransforms3d .movie:hover .poster {
+  box-shadow: inset 300px 0px 40px rgba(255,255,255,0.8);
+}
+
+.csstransforms3d .movie .info,
+.csstransforms3d .movie .info header {
+  box-shadow: inset -300px 0px 40px rgba(0,0,0,0.5);
+}
+
+.csstransforms3d .movie:hover .info,
+.csstransforms3d .movie:hover .info header {
+  box-shadow: inset 0px 0px 40px rgba(0,0,0,0);
+}
+
+/*************************************
+Posters and still images
+**************************************/
+
+.box:nth-child(1) {
+  background-color: rgb(54, 80, 177);
+  background-size: 700px 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.box:nth-child(2) {
+  background-color: rgb(47, 81, 187);
+  background-size: 700px 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.box:nth-child(3) {
+  background-color: rgb(55, 88, 198);
+  background-size: 700px 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.box:nth-child(1):hover, .box:nth-child(2):hover, .box:nth-child(3):hover {
+  background-color: rgb(42, 68, 151);
+}
+
+.scene .poster, .scene .info header {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/*************************************
+Fallback
+**************************************/
+.no-csstransforms3d .movie .poster,
+.no-csstransforms3d .movie .info {
+  position: relative;
+}

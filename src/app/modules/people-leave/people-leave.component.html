@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="headline">
+    <h1>ВЫПУСКНИКИ О КАФЕДРЕ</h1>
+    <h2><a href="" style="text-decoration: none; color: #2135C0;"></a></h2>
+  </div>
+
+  <div class="slider middle">
+
+    <div class="slides">
+      <input type="radio" name="sr" id="sr1" checked>
+      <input type="radio" name="sr" id="sr2">
+      <input type="radio" name="sr" id="sr3">
+      <input type="radio" name="sr" id="sr4">
+      <input type="radio" name="sr" id="sr5">
+
+      <div class="slide sl1">
+        <div class="card-leave" *ngFor="let data_slider of data;">
+          <div class="image-leave" [ngStyle]="{'background-image': 'url(' + data_slider.img + ')'}"></div>
+          <div class="text-leave">
+            <h3>{{data_slider.fullName}}, выпуск {{data_slider.year}}</h3>
+            <p>{{data_slider.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navigation">
+    <label for="sr1" class="bar"></label>
+    <label for="sr2" class="bar"></label>
+    <label for="sr3" class="bar"></label>
+    <label for="sr4" class="bar"></label>
+    <label for="sr5" class="bar"></label>
+  </div>
+
+  <br><br><br>
+  <br><br><br>
+  <br><br><br>
+
+
+</div>

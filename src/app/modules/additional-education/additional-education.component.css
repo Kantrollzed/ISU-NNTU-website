@@ -1,0 +1,162 @@
+
+/* Headline */
+.headline {
+  overflow: hidden;
+  height: 55px;
+  width: 1084px;
+  margin: 0 auto;
+}
+
+h1 {
+  float: left;
+  font-size: 24px;
+  width: 650px;
+  font-weight: bolder;
+}
+
+h2 {
+  float: right;
+  font-size: 18px;
+  font-weight: bolder;
+  text-decoration: none;
+  width: 150px;
+  padding-top: 5px;
+  color: #2135C0;
+}
+
+*, *:before, *:after{
+  font-family: 'Lato', sans-serif;
+}
+
+/* Content */
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.slider {
+  width:1200px;
+  height: 250px;
+  background-color: white;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.middle {
+  position: relative;
+}
+
+input[name='re'] {
+  position: absolute;
+  visibility: hidden;
+}
+
+input[name='ri'] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.slides {
+  height: 100%;
+  display: flex;
+}
+
+.slide {
+  width:3600px;
+  transition: all .7s ease;
+  height: 250px;
+  background-color: white;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card-edd {
+  width: 360px;
+  padding: 10px;
+  padding-bottom: 0;
+  border: none;
+  font-size: 18px;
+  text-decoration: inherit;
+  text-align: center;
+  font-weight: bolder;
+  font-family: sans-serif;
+}
+
+.image {
+  margin: 0 auto;
+  background-position: center;
+  width: 360px;
+  height: 180px;
+  background-repeat: no-repeat;
+}
+
+.navigation {
+  list-style: none;
+  justify-content: center;
+  display: flex;
+  margin: 10px auto 0 auto;
+  height: 10px;
+}
+
+.bar {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  margin-right: 3px;
+  margin-left: 3px;
+  cursor: pointer;
+  background-clip: padding-box;
+  background-color: #C4C4C4;
+  width: 30px;
+  height: 5px;
+  flex-direction: row;
+}
+
+.bar:active, .bar:hover {
+  background-color: #8F8F8F;
+}
+
+/* Set Sliding */
+/* Education */
+
+/* keyframe animation */
+
+@keyframes slider-keyframe {
+  0%, 28%, 100% {
+    margin-left: 2400px;
+  }
+
+  33%, 61% {
+    margin-left: 0px;
+  }
+
+  66%, 95% {
+    margin-left: -2400px;
+  }
+}
+
+.srr1 {
+  margin-left: 2400px;
+  animation: slider-keyframe 18s infinite;
+}
+
+
+#re1:checked ~ .srr1 {
+  margin-left: 2400px;
+  animation: paused;
+}
+
+#re2:checked ~ .srr1 {
+  margin-left: 0;
+  animation: paused;
+}
+
+#re3:checked ~ .srr1 {
+  margin-left: -2400px;
+  animation: paused;
+}

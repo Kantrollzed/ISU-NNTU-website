@@ -1,0 +1,66 @@
+<br>
+<mat-expansion-panel class="abitur-container">
+  <mat-expansion-panel-header class="abitur-head">
+    Дорожная карта Абитуриента или как поступить в Политех
+  </mat-expansion-panel-header>
+  <div class="abitur-content">
+    <br><br><br>
+
+    <div>
+      <div class="preview-img">
+        <img class="image-full" src="https://www.nntu.ru/frontend/web/ngtu/files/abiturientam/2020/pictures/podacha.png">
+      </div>
+      <div class="preview-text">
+        <p class="text-1">ПОДАЧА ДОКУМЕНТОВ</p>
+        <p class="text-2">C 20 июня по 18 августа 2020г.</p>
+        <p class="text-3">(Сроки приёма на коммерческую форму обучения могут быть продлены по решению приемной комиссии университета)</p>
+      </div>
+    </div>
+
+    <br class="after-box">
+
+    <p class="text-1">НЕОБХОДИМЫЕ ДОКУМЕНТЫ:</p>
+    <div *ngFor="let doc of docs">
+      <div class="docs-img">
+        <img class="image-full" src="{{doc.img}}">
+      </div>
+      <div class="docs-text">
+        <p class="text-2 text-ligther">{{doc.description}}</p>
+      </div>
+    </div>
+
+    <br class="after-box">
+
+    <p class="text-1">ЗАЧИСЛЕНИЕ:</p>
+    <div>
+      <div class="adds-img">
+        <img class="image-half" src="https://www.nntu.ru/frontend/web/ngtu/files/abiturientam/2020/pictures/zachislen.png">
+      </div>
+      <div class="adds-text">
+        <div class="adds-one-text" *ngFor="let add of adds">
+          <p class="text-1-less center">{{add.data}}</p>
+          <p class="text-2-less  text-ligther center">{{add.description}}</p>
+        </div>
+      </div>
+    </div>
+
+    <br class="after-box">
+
+    <p class="text-1">КОНТАКТЫ:</p>
+    <div>
+      <div class="contacts-text">
+        <p class="text-2">Телефоны "горячей линии": 8(831)436-73-43, 8(831)220-15-96</p>
+        <p class="text-2">E-mail: priem@nntu.ru; san@nntu.ru; dev@nntu.ru</p>
+        <p class="text-3">Вопросы по поступлению в НГТУ можно задать в <a href="https://vk.com/topic-173254078_40331677">ВКонтакте</a></p>
+      </div>
+    </div>
+
+    <br class="after-box">
+    <div class="width-all">
+      <div class="image-center">
+        <img src="https://www.nntu.ru/frontend/web/ngtu/files/abiturientam/2020/pictures/vk.png">
+      </div>
+    </div>
+  </div>
+</mat-expansion-panel>
+<br>

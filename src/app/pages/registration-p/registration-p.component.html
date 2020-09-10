@@ -1,0 +1,64 @@
+<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container-registration">
+  <br><br><br>
+  <h2>Registration</h2>
+  <br>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div *ngIf="this.personAlreadyAdded == true">Пользователь с данным email уже зарегистрирован</div>
+
+    <div class="form-group">
+      <label for="userName">Имя</label>
+      <input id="userName" type="text" formControlName="userName" class="form-control"
+             [ngClass]="{ 'is-invalid': submitted && this.registerForm.controls.userName.errors }" />
+      <div class="invalid-feedback"
+           *ngIf="this.registerForm.controls.userName.errors && this.registerForm.controls.userName.errors.required">Имя не может быть пустым</div>
+    </div>
+
+    <div class="form-group">
+      <label for="userEmail">Почта</label>
+      <input id="userEmail" type="email" formControlName="userEmail" class="form-control"
+             [ngClass]="{ 'is-invalid': submitted && this.registerForm.controls.userEmail.errors }" />
+      <div class="invalid-feedback"
+           *ngIf="this.registerForm.controls.userEmail.errors && this.registerForm.controls.userEmail.errors.required">Email не может быть пустым</div>
+      <div class="invalid-feedback"
+           *ngIf="this.registerForm.controls.userEmail.errors && this.registerForm.controls.userEmail.errors.email">Введите корректный email</div>
+    </div>
+
+    <div class="form-group">
+      <label for="category">Статус</label>
+      <select class="form-control" id="category" formControlName="category"
+              [ngClass]="{ 'is-invalid': submitted && this.registerForm.controls.category.errors }">
+        <option>Студент</option>
+        <option>Сотрудник</option>
+        <option>Администратор</option>
+      </select>
+    </div>
+
+
+    <div *ngIf="this.registerForm.controls.category.value === 'Студент'" class="form-group">
+      <label for="group_name">Группа</label>
+      <input id="group_name" type="text" formControlName="group_name" class="form-control"
+             [ngClass]="{ 'is-invalid': submitted && this.registerForm.controls.group_name.errors }" />
+      <div class="invalid-feedback"
+           *ngIf="this.registerForm.controls.group_name.errors && this.registerForm.controls.group_name.errors.required">Если вы студент, то группа не может быть пустой</div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Пароль</label>
+      <input id="password" type="password" formControlName="password" class="form-control"
+             [ngClass]="{ 'is-invalid': submitted && this.registerForm.controls.password.errors }" />
+
+      <div class="invalid-feedback"
+           *ngIf="this.registerForm.controls.password.errors && this.registerForm.controls.password.errors.required">Пароль не может быть пустым</div>
+      <div class="invalid-feedback">Пароль должен быть больше 6 символов.</div>
+    </div>
+    <br>
+    <div class="form-group">
+      <button class="btn btn-primary">Registration</button>
+      <br><br>
+      <a routerLink="/login" class="btn btn-link">Login</a>
+    </div>
+  </form>
+  <br>
+</div>

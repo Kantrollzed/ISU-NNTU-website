@@ -1,0 +1,93 @@
+/*  /ЗАГОЛОВКИ/  */
+h1 {
+  float: left;
+  font-size: 24px;
+  width: 500px;
+  font-weight: bolder;
+}
+
+h2 {
+  float: right;
+  font-size: 18px;
+  font-weight: bolder;
+  text-decoration: none;
+  width: 150px;
+  padding-top: 5px;
+  color: #2135C0;
+}
+
+.headline {
+  overflow: hidden;
+  height: 55px;
+  width: 1084px;
+  margin: 0 auto;
+}
+
+/*  /БЛОКИ/  */
+#container {
+  width: 1200px;
+  height: 406px;
+
+}
+#container > .box {
+  width: 31%;
+
+  background: #fff;
+  height: 100px;
+  float: left;
+  margin: 1.167%;
+}
+
+.text_2{
+  width: 167.84px;
+  height: 25px;
+  left: 1159.58px;
+  top: 1404px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 25px;
+  float: right;
+
+
+
+  color: #2135C0;
+}
+#text > p{
+  display: inline-block;
+}
+
+.fig{
+  margin-top:31px;
+  text-align: center;
+}
+.text_3{
+  width: 302.93px;
+  height: 60px;
+  left: 199.62px;
+  top: 1660px;
+  margin-left:75px;
+  margin-top: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #000000;
+}
+.text_4{
+  width: 179.1px;
+  height: 25px;
+  left: 231.35px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 25px;
+  margin-bottom: 0;
+  margin-left:125px;
+  color: #2135C0;
+}

@@ -1,0 +1,39 @@
+<div class="flip-container" onclick="this.classList.toggle('hover');">
+  <div class="flipper">
+    <div class="row">
+      <div *ngFor="let element of grant"class="box">
+
+
+        <section [id]="element.id" class="ap-modal">
+          <article class="post-modal">
+            <div class="title-modal">
+              <a class="button" href=""><span>Закрыть</span></a>
+              <img [src]="element.images">
+              <h5 class="card-title">{{element.title}}</h5>
+            </div>
+            <div class="body-modal" >
+              <h5 >{{element.info0}}<br><br>{{element.info1}}<br><br>{{element.info2}}<br><br>{{element.info3}}<br><br>{{element.info4}}<br><br></h5>
+
+            </div>
+          </article>
+        </section>
+
+
+        <div class="card h-100" >
+          <div class="front">
+            <div class="">
+              <div class="second"><img [src]=element.images class="ran"  alt="..."></div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{element.title}}</h5>
+              <p><b>Должность: </b>{{element.position}}</p>
+              <p><b>Ученое звание: </b>{{element.status}}</p>
+              <p><b>Ученая степень: </b>{{element.degree}}</p>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

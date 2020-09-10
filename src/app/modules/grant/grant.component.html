@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="headline">
+    <h1>ГРАНТЫ</h1>
+    <h2><a href="grants" style="text-decoration: none; color: #2135C0;">ВСЕ ГРАНТЫ> </a></h2>
+  </div><br>
+  <div  class="row row-cols-1">
+
+    <div *ngFor="let element of data"class="col mb-4 col-4">
+      <div class="cards" >
+        <div class="fs">
+
+          <div class="first" style="box-shadow: 0px 0px 2px 2px #17265c; color: rgb(255,255,255)">{{element.years}}</div>
+          <div class="second"><img [src]=element.img class="card-img-top"  alt="..."></div>
+        </div>
+        <div class="card-body">
+
+          <p class="card-title" >{{element.title}}</p>
+          <h5 style="font-weight: normal;">{{element.tema}}</h5>
+
+        </div>
+        <p id="endblock"></p>
+      </div>
+    </div>
+  </div>
+</div>

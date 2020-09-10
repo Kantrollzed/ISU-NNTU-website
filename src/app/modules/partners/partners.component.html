@@ -1,0 +1,35 @@
+<br>
+<div class="container">
+  <div class="headline">
+    <h1>ПАРТНЕРЫ</h1>
+    <h2><a [routerLink]="['partners']" style="text-decoration: none; color: #2135C0;">ВСЕ ПАРТНЁРЫ ></a></h2>
+  </div>
+
+  <div class="slider-p middle">
+
+    <div class="slides-p">
+      <input type="radio" name="p" id="p1">
+      <input type="radio" name="p" id="p2">
+      <input type="radio" name="p" id="p3">
+
+      <div class="slide spp1">
+        <div *ngFor="let data_slider of data;">
+          <div class="card-partners">
+              <div class="image" [ngStyle]="{'background-image': 'url(' + data_slider.img + ')'}"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="navigation">
+    <label for="p1" class="bar"></label>
+    <label for="p2" class="bar"></label>
+    <label for="p3" class="bar"></label>
+  </div>
+
+
+  <br><br>
+</div>

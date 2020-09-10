@@ -1,0 +1,12 @@
+<div class="container-left-bar">
+  <div class="contain">
+    <h1>{{name_menu}}</h1>
+    <div class="content-text" *ngFor="let blockHref of data;">
+      <h1>
+        <a routerLink="{{active_route}}" fragment="{{blockHref.fragment}}">{{blockHref.title}}</a>
+      </h1>
+    </div>
+  </div>
+  <div class="triangle">
+  </div>
+</div>

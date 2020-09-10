@@ -1,0 +1,19 @@
+<div class="mycontent">
+  <div class="row" *ngFor="let item of items, let i = index">
+    <div style="margin: 32px auto">
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="row card-body">
+            <img *ngIf="i % 2 == 0" style="width: 500px; padding-left: 50px;padding-right: 50px" class="col-sm-6" src="{{item.img}}" alt="sans"/>
+            <div style="padding-left: 50px; padding-right: 50px" class="col-sm-6">
+              <h4 class="card-title">{{item.name1}}</h4>
+              <p class="card-text">{{item.text}}</p>
+              <a href="#" class="btn btn-primary">Больше</a>
+            </div>
+            <img *ngIf="i % 2 == 1" style="width: 500px; padding-left: 50px;padding-right: 50px" class="col-sm-6" src="{{item.img}}" alt="sans"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

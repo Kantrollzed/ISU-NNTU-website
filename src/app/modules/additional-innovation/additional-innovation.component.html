@@ -1,0 +1,44 @@
+<br>
+<div class="container">
+  <div class="headline" *ngIf="classComponent == 'Innovation'">
+    <h1>МАЛОЕ ИНОВАЦИОННОЕ ПРЕДПРИЯТИЕ "БЕЗОПАСНОСТЬ ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ" (БИТ)</h1>
+    <br>
+    <h2><a href="" style="text-decoration: none; color: #2135C0;"></a></h2>
+  </div><br>
+
+  <div class="slider middle">
+
+    <div class="slides">
+      <input type="radio" name="ri" id="ri1">
+      <input type="radio" name="ri" id="ri2">
+      <input type="radio" name="ri" id="ri3">
+
+      <div class="slide" [ngClass]="{
+        'srr2': classComponent == 'Innovation'
+      }">
+        <div *ngFor="let data_slider of data; let i=index">
+
+          <div class="card-inv" *ngIf="classComponent == 'Innovation'">
+            <div *ngIf="i % 2 == 1">
+              <p>{{data_slider.title}}</p>
+              <div class="image" [ngStyle]="{'background-image': 'url(' + data_slider.img + ')'}"></div>
+            </div>
+            <div *ngIf="i % 2 == 0">
+              <div class="image" [ngStyle]="{'background-image': 'url(' + data_slider.img + ')'}"></div>
+              <p>{{data_slider.title}}</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="navigation" *ngIf="classComponent == 'Innovation'">
+    <label for="ri1" class="bar"></label>
+    <label for="ri2" class="bar"></label>
+    <label for="ri3" class="bar"></label>
+  </div>
+
+</div>

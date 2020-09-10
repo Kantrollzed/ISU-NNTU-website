@@ -1,0 +1,28 @@
+<div class="container">
+  <br>
+  <div class="text" style="overflow: hidden; height: 55px; ">
+    <div style="float: left; font-size: 22px; width: 500px; font-weight: bolder;">СТАРТАПЫ С УЧАСТИЕМ СТУДЕНТОВ</div>
+    <a href="http://miriteam.com/" style="float: right; font-size: 16px; font-weight: bolder; text-decoration: none ;width: 150px; padding-top: 5px; color: #2135C0">ВСЕ ПРОЕКТЫ ></a>
+  </div>
+  <div class="wrapper">
+    <ul class="stage">
+      <li *ngFor="let element of data;" class="box">
+        <br>
+        <p style="text-align: center; font-size: 22px; margin-bottom: 25px; color: #FFFFFF; height: 50px">{{element.title}}</p>
+        <div class="scene">
+          <div class="movie" onclick="return true">
+            <div class="poster" [ngStyle]="{'background-image': 'url(' + element.img + ')'}"></div>
+            <div class="info" >
+              <header [ngStyle]="{'background-image': 'url(' + element.img + ')'}">
+                <h1>{{element.title}}</h1>
+              </header>
+              <p>{{element.description}}</p>
+
+              <a [routerLink]="element.href" class="glo">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+
+<header>
+  <a href=""><img href="" src="http://isu.nntu.ru/sites/default/files/pixture_reloaded_logo.PNG" align="left" style="margin: 15px;"></a>
+
+  <a *ngIf="isLoggedIn" routerLink="profile" class="icon-box">
+    <div class="icon-contain">
+      <mat-icon [inline]="true" class="icon-mean">account_box</mat-icon>
+    </div>
+
+    <p class="user-name">
+      {{username}}
+    </p>
+  </a>
+
+  <a *ngIf="!isLoggedIn" routerLink="login" class="icon-box">
+    <div class="icon-contain">
+      <mat-icon [inline]="true" class="icon-mean">account_box</mat-icon>
+    </div>
+  </a>
+
+  <p id="gltext">Кафедра Информатики и <br> систем управления</p>
+  <nav role='navigation'>
+    <ul>
+      <li><a href="kaf">О кафедре</a></li>
+      <li><a href="news">Новости</a></li>
+      <li><a href="abiturient">Абитуриентам</a>
+        <ul>
+          <li><a href="abiturient">Направления обучения</a></li>
+          <li><a href="http://localhost:4200/abiturient#abitur-map">О поступлении</a></li>
+        </ul>
+      </li>
+      <li><a href="">Студентам</a>
+        <ul>
+          <li><a href="">Библиотека студента</a></li>
+          <li><a href="">Вакансии</a></li>
+          <li><a href="">Объявления</a></li>
+          <li><a href="">Практики</a></li>
+          <li><a href="">Расписание</a></li>
+          <li><a href="">Учебные планы</a></li>
+        </ul>
+      </li>
+      <li><a href="projects">Проекты</a></li>
+
+    </ul>
+  </nav>
+</header>
+
+<div class="main_container">
+  <router-outlet></router-outlet>
+</div>
+
+<footer>
+  <div id="footcontent">Тел.: 8(831) 436-83-44 <br>E-mail: cscs@nntu.ru, stepanenkoma@mail.ru <br> Адрес: г.Нижний Новгород, ул. Минина, д.24, корп. 4, ауд. 4401-4408
+  </div>
+</footer>
+

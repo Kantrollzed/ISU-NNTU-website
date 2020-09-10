@@ -1,0 +1,65 @@
+.profile-container {
+  min-height: 900px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.profile-news {
+  background-color: #eae3be;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.profile {
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #e0d5d5;
+}
+
+.news-list-contain {
+  background-color: #abbadc;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.news-list{
+  margin: 0 auto;
+  border-top: #274da3 4px solid;
+  overflow-y: scroll;
+  max-height: 700px;
+}
+
+.profile-card{
+  font-size: 14px;
+}
+
+.profile-head {
+  font-size: 30px;
+}
+
+.profile-params {
+  font-size: 25px;
+  text-indent: 40px;
+}
+
+.abitur-container {
+  font-family: "Open Sans", Arial, sans-serif;
+  margin: 0 auto;
+}
+
+.abitur-head  {
+  background-color: #454a5c !important;
+  color: white;
+  font-size: 20px;
+  height: 45px
+}
+
+.abitur-head:hover {
+  background-color: #555252 !important;
+}
+
+.abitur-content {
+  width: 100%;
+}

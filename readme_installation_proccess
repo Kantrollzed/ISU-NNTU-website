@@ -1,0 +1,44 @@
+///////
+// Подготовка к запуску
+///////
+
+
+Открываем терминал в директории проекта
+
+
+Вводим команды установки: (sudo в начале ставится, если пишете на Linux)
+- express(сервер node.js, позволяющий обрабатывать запросы)
+sudo npm install express --save
+
+- nodemon(запускает сервер, не выключающийся при ошибках, а ожидающий их исправления)
+sudo npm install nodemon --save
+
+
+Переходим по ссылке и устанавливаем ядро mongodb:
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
+
+
+После успешной установки ядра устанавливаем: 
+- mongoose(пакет для удобной работы с моделями mongodb)
+sudo npm install mongoose --save
+
+- body-parser(пакет, позволяющий интерпретировать данные, полученные запросом к серверу, как json обьект)
+sudo npm install body-parser  --save
+
+
+
+Добавляем angular/material в проект:
+ng add @angular/material // соглашаемся с метриками, и выбираем custom стили
+
+///////
+// Запуск
+///////
+
+запускаем 2 терминала в директории проекта:
+-на первом из корня запускаем проект
+npm run start
+
+-на втором запускаем сервер, обрабатывающий запросы:
+cd ./api
+nodemon server.js

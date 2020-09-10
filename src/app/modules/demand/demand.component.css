@@ -1,0 +1,33 @@
+
+.text {
+  width: 1084px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#img{
+  text-align: center;
+}
+.wrapper {
+  padding: 20px;
+  max-width: 100%;
+}
+
+.box {
+  width: 350px;
+  padding: 30px 20px;
+}
+
+
+.stage {
+  list-style: none;
+  padding: 0px;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+

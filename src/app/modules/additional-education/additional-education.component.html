@@ -1,0 +1,43 @@
+
+<p>   </p>
+<br><br>
+<div class="container">
+  <div class="headline">
+    <h1>ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</h1>
+    <h2><a href="" style="text-decoration: none; color: #2135C0;"></a></h2>
+  </div><br>
+
+  <div class="slider middle">
+
+    <div class="slides">
+      <input type="radio" name="re" id="re1">
+      <input type="radio" name="re" id="re2">
+      <input type="radio" name="re" id="re3">
+
+      <div class="slide" [ngClass]="{
+        'srr1': classComponent == 'Education'
+      }">
+        <div *ngFor="let data_slider of data; let i=index">
+          <div class="card-edd">
+            <div *ngIf="i % 2 == 0">
+              <p>{{data_slider.title}}</p>
+              <div class="image" [ngStyle]="{'background-image': 'url(' + data_slider.img + ')'}"></div>
+            </div>
+            <div *ngIf="i % 2 == 1">
+              <div class="image" [ngStyle]="{'background-image': 'url(' + data_slider.img + ')'}"></div>
+              <p>{{data_slider.title}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="navigation">
+    <label for="re1" class="bar"></label>
+    <label for="re2" class="bar"></label>
+    <label for="re3" class="bar"></label>
+  </div>
+
+</div>

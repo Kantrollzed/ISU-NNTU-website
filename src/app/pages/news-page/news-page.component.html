@@ -1,0 +1,24 @@
+<div>
+  <div class="inf">
+    <p class="t1">НОВОСТИ И ОБЪЯВЛЕНИЯ КАФЕДРЫ ИСУ</p>
+    <p class="t2">На данной странице представлены важные и интересные новости, а также объявления из жизни нашей кафедры</p>
+  </div>
+
+  <div class="container" *ngFor="let card of pageSlice;">
+    <div class="data">
+      <p class="data_text"> {{card.data}}</p>
+      <div class='triangle'></div>
+      <div class="null"></div>
+    </div>
+
+    <div class="block">
+      <p class='title'>{{card.title}}</p>
+      <p class="news">{{card.news}}</p>
+      <p class="text_4"><a href='news'>ЧИТАТЬ ДАЛЕЕ ></a></p>
+    </div>
+  </div>
+  <mat-paginator [length]="news.length" [pageSize]="10" (page)='onPangeChange($event)'>
+  </mat-paginator>
+</div>
+
+<a href="news" title="Вернуться к началу" class="topbutton"></a>
