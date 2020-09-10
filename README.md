@@ -41,9 +41,9 @@ ng add @angular/material
 git clone https://github.com/Kantrollzed/ISU-NNTU-website.git
 ```
 
-Заменить your_project/src директорию на ./src, представленную в проекте
+Заменить директорию ```your_project/src``` на ```./src```, представленную в проекте
 
-Добавить директорию ./api в your_project/
+Добавить директорию ```./api``` в ```./your_project```
 
 
 
